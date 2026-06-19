@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadiyah Quran Academy - Learn Quran Online with Expert Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #0d4d2c 0%, #1a7a4a 100%); color: white; padding: 15px 0; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .logo { font-size: 24px; font-weight: bold; display: flex; align-items: center; gap: 10px; }
+        .logo span { color: #d4af37; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { color: white; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: #d4af37; }
+        
+        /* Hero */
+        .hero { background: linear-gradient(rgba(13,77,44,0.9), rgba(26,122,74,0.9)), url('https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=2070') center/cover; color: white; padding: 150px 20px 100px; text-align: center; margin-top: 60px; }
+        .hero h1 { font-size: 48px; margin-bottom: 20px; line-height: 1.2; }
+        .hero h1 span { color: #d4af37; }
+        .hero p { font-size: 20px; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .cta-btn { display: inline-block; background: #d4af37; color: #0d4d2c; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; transition: 0.3s; box-shadow: 0 5px 15px rgba(212,175,55,0.3); }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(212,175,55,0.4); }
+        .trial-badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 8px 20px; border-radius: 20px; margin-top: 20px; font-size: 16px; }
+        
+        /* Sections */
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0d4d2c; }
+        .section-title span { color: #d4af37; }
+        
+        /* Courses */
+        .courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .course-card { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); transition: 0.3s; border-top: 4px solid #d4af37; }
+        .course-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+        .course-card h3 { color: #0d4d2c; font-size: 24px; margin-bottom: 15px; }
+        .price { font-size: 32px; color: #d4af37; font-weight: bold; margin: 15px 0; }
+        .price span { font-size: 16px; color: #666; }
+        .course-features { list-style: none; margin: 20px 0; }
+        .course-features li { padding: 8px 0; padding-left: 25px; position: relative; }
+        .course-features li:before { content: "✓"; position: absolute; left: 0; color: #1a7a4a; font-weight: bold; }
+        
+        /* Why Us */
+        .why-us { background: #f8f9fa; }
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature { text-align: center; padding: 20px; }
+        .feature-icon { font-size: 48px; margin-bottom: 15px; }
+        .feature h3 { color: #0d4d2c; margin-bottom: 10px; }
+        
+        /* About */
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-text h3 { color: #0d4d2c; font-size: 28px; margin-bottom: 20px; }
+        
+        /* Contact */
+        .contact { background: linear-gradient(135deg, #0d4d2c 0%, #1a7a4a 100%); color: white; text-align: center; border-radius: 15px; padding: 60px 20px; }
+        .contact h2 { font-size: 36px; margin-bottom: 20px; }
+        .whatsapp-btn { display: inline-block; background: #25D366; color: white; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 18px; margin: 10px; transition: 0.3s; }
+        .whatsapp-btn:hover { background: #128C7E; transform: scale(1.05); }
+        
+        /* Footer */
+        .footer { background: #0a3d23; color: white; text-align: center; padding: 30px 20px; }
+        
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .nav-links { display: none; }
+            .about-content { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🕌 Hadiyah <span>Quran Academy</span></div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>Learn Quran Online with <span>Qari Hashir</span></h1>
+        <p>One-on-One Live Classes for Kids & Adults Worldwide. Master Noorani Qaida, Nazra & Tajweed from the comfort of your home.</p>
+        <a href="https://wa.me/923138573662?text=Assalamualaikum%20I%20want%20to%20join%20Hadiyah%20Quran%20Academy" class="cta-btn">Start Free Trial Now</a>
+        <div class="trial-badge">✨ 3 Days Free Trial - No Credit Card Needed</div>
+    </section>
+
+    <!-- Courses -->
+    <section class="section" id="courses">
+        <h2 class="section-title">Our <span>Hadiyah Courses</span></h2>
+        <div class="courses">
+            <div class="course-card">
+                <h3>Noorani Qaida</h3>
+                <div class="price">$35 <span>/month ~9,750 PKR</span></div>
+                <ul class="course-features">
+                    <li>3 Classes per Week</li>
+                    <li>30 Minutes per Session</li>
+                    <li>Perfect for Beginners</li>
+                    <li>Arabic Alphabet & Pronunciation</li>
+                    <li>One-on-One Live Class</li>
+                </ul>
+                <a href="https://wa.me/923138573662?text=I%20want%20to%20enroll%20in%20Noorani%20Qaida%20course" class="cta-btn">Enroll Now</a>
+            </div>
+            
+            <div class="course-card">
+                <h3>Nazra Quran</h3>
+                <div class="price">$45 <span>/month ~12,500 PKR</span></div>
+                <ul class="course-features">
+                    <li>3 Classes per Week</li>
+                    <li>30 Minutes per Session</li>
+                    <li>Read Quran Fluently</li>
+                    <li>Basic Tajweed Rules</li>
+                    <li>Daily Practice Plan</li>
+                </ul>
+                <a href="https://wa.me/923138573662?text=I%20want%20to%20enroll%20in%20Nazra%20Quran%20course" class="cta-btn">Enroll Now</a>
+            </div>
+            
+            <div class="course-card">
+                <h3>Tajweed Course</h3>
+                <div class="price">$50 <span>/month ~13,900 PKR</span></div>
+                <ul class="course-features">
+                    <li>2 Classes per Week</li>
+                    <li>45 Minutes per Session</li>
+                    <li>Advanced Tajweed Rules</li>
+                    <li>Makharij & Sifaat</li>
+                    <li>Qirat Improvement</li>
+                </ul>
+                <a href="https://wa.me/923138573662?text=I%20want%20to%20enroll%20in%20Tajweed%20course" class="cta-btn">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-us">
+        <h2 class="section-title">Why <span>Hadiyah Quran?</span></h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">👨‍🏫</div>
+                <h3>One-on-One Classes</h3>
+                <p>Personal attention for every student. Learn at your own pace.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⏰</div>
+                <h3>Flexible Timings</h3>
+                <p>Classes available 7PM-11PM PKT. Perfect for US/UK students.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">💻</div>
+                <h3>Live on Zoom/Skype</h3>
+                <p>Interactive classes with screen sharing and digital whiteboard.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎁</div>
+                <h3>3 Days Free Trial</h3>
+                <p>Experience our teaching before you pay. No commitment needed.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <h2 class="section-title">About Your <span>Teacher</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Assalamualaikum, I'm Qari Hashir</h3>
+                <p>Alhamdulillah, I have dedicated my life to teaching the Holy Quran with proper Tajweed. My mission is to make Quran learning easy, accessible, and enjoyable for Muslims living abroad.</p>
+                <p><strong>My Teaching Philosophy:</strong> Every student is a gift from Allah. I teach with patience, love, and focus on building strong foundation in Noorani Qaida first, then moving to fluent Nazra with Tajweed.</p>
+                <p><strong>Special Offer:</strong> Family discount available. 2 siblings = 15% off on total fees.</p>
+            </div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?q=80&w=2070" alt="Quran" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="contact">
+            <h2>Start Your Quran Journey Today</h2>
+            <p style="font-size: 18px; margin-bottom: 30px;">Less than $1.20 per day to learn Allah's Book. Book your free trial now!</p>
+            <a href="https://wa.me/923138573662?text=Assalamualaikum%20Qari%20Hashir%2C%20I%20want%20to%20book%20my%203-day%20free%20trial%20class" class="whatsapp-btn">💬 Message on WhatsApp</a>
+            <p style="margin-top: 20px;">📧 Email: hashirkhan2637@gmail.com</p>
+            <p>⏰ Class Timings: 7:00 PM - 11:00 PM Pakistan Time</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Hadiyah Quran Academy. All Rights Reserved.</p>
+        <p style="margin-top: 10px; color: #d4af37;">"The best among you are those who learn the Quran and teach it" - Hadith</p>
+    </footer>
+</body>
+</html>
